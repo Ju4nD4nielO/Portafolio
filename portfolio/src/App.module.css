@@ -1,0 +1,31 @@
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 0.5px solid var(--border);
+}
+
+.footerLink {
+  color: var(--accent);
+  text-decoration: none;
+}
+.footerLink:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .container { padding: 0 1.25rem; }
+}

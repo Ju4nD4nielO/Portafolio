@@ -1,16 +1,131 @@
-# React + Vite
+# Juan Daniel Ordóñez Sierra — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio web personal desarrollado con **React + Vite**, desplegado en [Vercel](https://vercel.com) / [Render](https://render.com).
 
-Currently, two official plugins are available:
+## 🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Portafolio live:** 
+- **GitHub:** [github.com/Ju4nD4nielO](https://github.com/Ju4nD4nielO)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Stack
 
-## Expanding the ESLint configuration
+| Tecnología | Uso |
+|---|---|
+| React 18 | UI y componentes |
+| Vite 4 | Bundler y dev server |
+| CSS Modules | Estilos con scope por componente |
+| Google Fonts (DM Sans / DM Mono) | Tipografía |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sin dependencias externas de UI — todo construido desde cero.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+portfolio/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/       # Componentes reutilizables
+│   │   ├── Icon.jsx
+│   │   ├── Navbar.jsx
+│   │   └── Navbar.module.css
+│   ├── sections/         # Secciones del portafolio
+│   │   ├── Hero.jsx / Hero.module.css
+│   │   ├── About.jsx / About.module.css
+│   │   ├── Technologies.jsx / Technologies.module.css
+│   │   ├── Projects.jsx / Projects.module.css
+│   │   └── Contact.jsx / Contact.module.css
+│   ├── data.js           # Todo el contenido del portafolio
+│   ├── App.jsx
+│   ├── App.module.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+> Para actualizar contenido (proyectos, bio, links), editar únicamente **`src/data.js`**.
+
+---
+
+## 🚀 Instalación y uso local
+
+### Requisitos
+
+- Node.js >= 16
+- npm >= 7
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Ju4nD4nielO/portfolio.git
+cd portfolio
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Iniciar servidor de desarrollo
+npm run dev
+# → http://localhost:5173
+```
+
+### Build de producción
+
+```bash
+npm run build
+# Genera carpeta /dist lista para deploy
+
+npm run preview
+# Preview local del build de producción
+```
+
+---
+
+## ☁️ Deploy
+
+### Vercel (recomendado)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+O conecta el repositorio directamente en [vercel.com](https://vercel.com) — detecta Vite automáticamente.
+
+### Render
+
+1. New → Static Site
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+
+---
+
+## ✏️ Personalización
+
+Para modificar el contenido del portafolio, editar `src/data.js`:
+
+```js
+export const personal = {
+  name: '...',
+  email: '...',
+  github: '...',
+  // ...
+}
+
+export const projects = [
+  {
+    title: '...',
+    description: '...',
+    github: '...',
+    live: '...',       // null si no hay demo
+    tags: [...],
+    highlights: [...],
+  }
+]
+```
