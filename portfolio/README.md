@@ -4,7 +4,7 @@ Portafolio web personal desarrollado con **React + Vite**, desplegado en [Vercel
 
 ## 🔗 Links
 
-- **Portafolio live:** 
+- **Portafolio live:** https://portafolio-two-psi-12.vercel.app 
 - **GitHub:** [github.com/Ju4nD4nielO](https://github.com/Ju4nD4nielO)
 
 ---
@@ -98,34 +98,4 @@ vercel
 
 O conecta el repositorio directamente en [vercel.com](https://vercel.com) — detecta Vite automáticamente.
 
-### Render
-
-1. New → Static Site
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-
 ---
-
-## ✏️ Personalización
-
-Para modificar el contenido del portafolio, editar `src/data.js`:
-
-```js
-export const personal = {
-  name: '...',
-  email: '...',
-  github: '...',
-  // ...
-}
-
-export const projects = [
-  {
-    title: '...',
-    description: '...',
-    github: '...',
-    live: '...',       // null si no hay demo
-    tags: [...],
-    highlights: [...],
-  }
-]
-```
